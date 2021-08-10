@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang='en'>
+   <head>
+      <title></title>
+      <meta charset='utf-8'>
+      <link rel="stylesheet" href="style.css">
+      <script defer src='Audit.js'></script>
+   </head>
+   
+   <body id="Audit" onload="let clock = setInterval('startClock()', 1000);">
+      <p id="clock"></p>
+      <p><br>Audit rules are:<br> </p>
+      <ul>
+         <li>Hover over "Question**" for section help</li>
+         <li>Each section will be disabled on progression</li>
+         <li>You have 5 minutes to complete the Audit</li>
+         <li>Enjoy your summer holidays</li>
+      </ul>
+      <form style="width:75%; margin-left: auto; margin-right: auto; display:block; border:1px solid; padding:10px;">
+         <table class = "center" id="section1" tabindex="0">            
+            <tr>
+               <th onmouseover="showTooltip(tooltip1)" onmouseout="hideTooltip(tooltip1)">Question**</th>
+               <div class = "tooltip" id="tooltip1">Answer each question with 1 being Strongly disagree and 5 being Strongly agree</div>
+               <th>1</th>
+               <th>2</th>
+               <th>3</th>
+               <th>4</th>
+               <th>5</th>
+            </tr>
+            <tr>
+               </div>
+               <td>
+                  I and/or my colleagues know where to get information to help us analyse<br> 
+                  the business case for consciously attracting people with disabilities as<br> 
+                  members
+                  <div class="tooltip"> ***
+                     <span class="tooltiptext">Tooltip text</span>
+                  </div>
+               </td>
+               <td><input type="radio" name="sec1question1" value="1" checked></td>
+               <td><input type="radio" name="sec1question1" value="2"></td>
+               <td><input type="radio" name="sec1question1" value="3"></td>
+               <td><input type="radio" name="sec1question1" value="4"></td>
+               <td><input type="radio" name="sec1question1" value="5"></td>
+            </tr>
+            <tr>
+               <td>I/my colleagues have researched the scope for increasing the participation<br>  
+                  of the broader community, in particular people with disabilities
+               </td>
+               <td><input type="radio" name="sec1question2" value="1" checked></td>
+               <td><input type="radio" name="sec1question2" value="2"></td>
+               <td><input type="radio" name="sec1question2" value="3"></td>
+               <td><input type="radio" name="sec1question2" value="4"></td>
+               <td><input type="radio" name="sec1question2" value="5"></td>
+            </tr>
+            <tr>
+               <td>I know of disability service providers that I could link with in the local<br> 
+                  community
+               </td>
+               <td><input type="radio" name="sec1question3" value="1" checked></td>
+               <td><input type="radio" name="sec1question3" value="2"></td>
+               <td><input type="radio" name="sec1question3" value="3"></td>
+               <td><input type="radio" name="sec1question3" value="4"></td>
+               <td><input type="radio" name="sec1question3" value="5"></td>
+            </tr>
+            <tr>
+               <td>My colleagues and I inclusivize our services to provide for people with<br> 
+                  disabilities 
+               </td>
+               <td><input type="radio" name="sec1question4" value="1" checked></td>
+               <td><input type="radio" name="sec1question4" value="2"></td>
+               <td><input type="radio" name="sec1question4" value="3"></td>
+               <td><input type="radio" name="sec1question4" value="4"></td>
+               <td><input type="radio" name="sec1question4" value="5"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section1');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment1">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section2" tabindex="1">
+            <tr>
+               <th onmouseover="showTooltip(tooltip2)" onmouseout="hideTooltip(tooltip2)">Question**</th>
+               <div class = "tooltip" id="tooltip2">Answer each question with 1 being Strongly disagree and 5 being Strongly agree</div>
+               <th>1</th>
+               <th>2</th>
+               <th>3</th>
+               <th>4</th>
+               <th>5</th>
+            </tr>
+            <tr>
+               <td>My colleagues and I have a significant contribution to make to the quality<br>  
+                  of life of people in our community, including people with disabilities
+               </td>
+               <td><input type="radio" name="sec2question1" value="1" checked></td>
+               <td><input type="radio" name="sec2question1" value="2"></td>
+               <td><input type="radio" name="sec2question1" value="3"></td>
+               <td><input type="radio" name="sec2question1" value="4"></td>
+               <td><input type="radio" name="sec2question1" value="5"></td>
+            </tr>
+            <tr>
+               <td>My colleagues and I have the scope to improve opportunities for<br> 
+                  participation in fitness activities for people living in, or visiting our<br> 
+                  community, including people with disabilities
+               </td>
+               <td><input type="radio" name="sec2question2" value="1" checked></td>
+               <td><input type="radio" name="sec2question2" value="2"></td>
+               <td><input type="radio" name="sec2question2" value="3"></td>
+               <td><input type="radio" name="sec2question2" value="4"></td>
+               <td><input type="radio" name="sec2question2" value="5"></td>
+            </tr>
+            <tr>
+               <td>The benefits of increasing our UniversAbility  to increase participation are<br> 
+                  clear
+               </td>
+               <td><input type="radio" name="sec2question3" value="1" checked></td>
+               <td><input type="radio" name="sec2question3" value="2"></td>
+               <td><input type="radio" name="sec2question3" value="3"></td>
+               <td><input type="radio" name="sec2question3" value="4"></td>
+               <td><input type="radio" name="sec2question3" value="5"></td>
+            </tr>
+            <tr>
+               <td>My colleagues and I play a major role in providing health services to the<br> 
+                  entire community, including people with disabilities
+               </td>
+               <td><input type="radio" name="sec2question4" value="1" checked></td>
+               <td><input type="radio" name="sec2question4" value="2"></td>
+               <td><input type="radio" name="sec2question4" value="3"></td>
+               <td><input type="radio" name="sec2question4" value="4"></td>
+               <td><input type="radio" name="sec2question4" value="5"></td>
+            </tr>
+            <tr>
+               <td>The UniversAbility  of our fitness services increases the job satisfaction<br> 
+                  and turnover of my staff
+               </td>
+               <td><input type="radio" name="sec2question5" value="1" checked></td>
+               <td><input type="radio" name="sec2question5" value="2"></td>
+               <td><input type="radio" name="sec2question5" value="3"></td>
+               <td><input type="radio" name="sec2question5" value="4"></td>
+               <td><input type="radio" name="sec2question5" value="5"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section2');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment2">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section3" tabindex="2">
+            <tr>
+               <th onmouseover="showTooltip(tooltip3)" onmouseout="hideTooltip(tooltip3)">Question**</th>
+               <div class = "tooltip" id="tooltip3">Answer each question with 1 being Strongly disagree and 5 being Strongly agree</div>
+               <th>1</th>
+               <th>2</th>
+               <th>3</th>
+               <th>4</th>
+               <th>5</th>
+            </tr>
+            <tr>
+               <td>My colleagues and I envision ourselves as leaders of cultural change</td>
+               <td><input type="radio" name="sec3question1" value="1" checked></td>
+               <td><input type="radio" name="sec3question1" value="2"></td>
+               <td><input type="radio" name="sec3question1" value="3"></td>
+               <td><input type="radio" name="sec3question1" value="4"></td>
+               <td><input type="radio" name="sec3question1" value="5"></td>
+            </tr>
+            <tr>
+               <td>
+                  <p>Which of the following statements best describes your situation within your organisation (Please select one)</p>
+               </td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>I and/or my colleagues have identified set targets for increasing the<br> 
+                  UniversAbility of our services and are putting strategies in place to<br> 
+                  achieve these goals
+               </td>
+               <td><input type="radio" name="sec3question2" value="5" checked></td>
+               <th>5</th>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>I and/or my colleagues have identified scope for increasing the<br> 
+                  UniversAbility of our services 
+               </td>
+               <td><input type="radio" name="sec3question2" value="4"></td>
+               <th>4</th>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>I think there may be scope for inclusivizing our services but am<br> 
+                  not sure
+               </td>
+               <td><input type="radio" name="sec3question2" value="3"></td>
+               <th>3</th>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>I have never considered inclusivizing our services until now</td>
+               <td><input type="radio" name="sec3question2" value="2"></td>
+               <th>2</th>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>I don&#39t think inclusivizing our services, in particular for<br> 
+                  people with disabilities, is really an option for us but won&#39t<br> 
+                  rule it out completely until it has been fully explored 
+               </td>
+               <td><input type="radio" name="sec3question2" value="1"></td>
+               <th>1</th>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section3');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment3">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section4" tabindex="3">
+            <tr>
+               <th onmouseover="showTooltip(tooltip4)" onmouseout="hideTooltip(tooltip4)">Question**</th>
+               <div class = "tooltip" id="tooltip4">If yes is selected in Q1, one or more checkbxes must be selected</div>
+               <th>Yes</th>
+               <th>No</th>
+               <th></th>
+            </tr>
+            <tr>
+               <td>Does your organisation have stated ideals in your strategic plan or other 
+                  management documents which relate UniversAbility of your services?
+               </td>
+               <td><input type="radio" id="rb1" name="sec4question1" value="10" onclick="enableCheckbox(4);" checked></td>
+               <td><input type="radio" name="sec4question1" value="0" onclick="disableCheckbox(4);" ></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Question</th>
+               <th>Managers</th>
+               <th>Employees</th>
+               <th>Customers</th>
+            </tr>
+            <tr id="checkboxerror">
+               <td id="error">Do you think an inclusive philosophy is a lived experience by:</td>
+               <td><input type="checkbox" name="sec4" value="10"></td>
+               <td><input type="checkbox" name="sec4" value="10"></td>
+               <td><input type="checkbox" name="sec4" value="10"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section4');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment4">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section5" tabindex="4">
+            <tr>
+               <th onmouseover="showTooltip(tooltip5)" onmouseout="hideTooltip(tooltip5)">Question**</th>
+               <div class = "tooltip" id="tooltip5">Answer Yes or No to each question</div>
+               <th>Yes</th>
+               <th>No</th>
+               <th></th>
+            </tr>
+            <tr>
+               <td>Does your charging policy account for the varied needs of 
+                  your customers? E.g. No charge for personal assistants
+               </td>
+               <td><input type="radio" name="sec5question1" value="10" checked></td>
+               <td><input type="radio" name="sec5question1" value="0"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>Do you track and monitor the proportion of your club members 
+                  who experience disabilities?
+               </td>
+               <td><input type="radio" name="sec5question2" value="10" checked></td>
+               <td><input type="radio" name="sec5question2" value="0"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Question</th>
+               <th>Yes</th>
+               <th>No</th>
+               <th>Not needed equipment already accessible</th>
+            </tr>
+            <tr>
+               <td>Have you a budget allocated to increasing the UniversAbility  of your services? 
+                  (eg. facilities, equipment and staff training)
+               </td>
+               <td><input type="radio" name="sec5question3" value="10" checked></td>
+               <td><input type="radio" name="sec5question3" value="0"></td>
+               <td><input type="radio" style="text-align:center; margin-left:50px;"name="sec5question3" value="10"></td>
+            </tr>
+            <tr>
+               <td>Have you a budget allocated to increasing the UniversAbility  of your policies? </td>
+               <td><input type="radio" name="sec5question4" value="10" checked></td>
+               <td><input type="radio" name="sec5question4" value="0"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>Are you familiar with the national legislation that relates to disability service provision?</td>
+               <td><input type="radio" name="sec5question5" value="10" checked></td>
+               <td><input type="radio" name="sec5question5" value="0"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section5');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment5">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section6" tabindex="5">
+            <tr>
+               <th onmouseover="showTooltip(tooltip6)" onmouseout="hideTooltip(tooltip6)">Question**</th>
+               <div class = "tooltip" id="tooltip6">Answer Yes or No to each question</div>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <td>Do you engage with disability groups in your local community?</td>
+               <td><input type="radio" name="sec6question1" value="10" checked></td>
+               <td><input type="radio" name="sec6question1" value="0"></td>
+            </tr>
+            <tr>
+               <td>Have you forged any alliance/partnership with any disability organisation?</td>
+               <td><input type="radio" name="sec6question2" value="10" checked></td>
+               <td><input type="radio" name="sec6question2" value="0"></td>
+            </tr>
+            <tr>
+               <td>Have you or your staff embraced any assistive technologies (E.g. Assist-Mi app)?</td>
+               <td><input type="radio" name="sec6question3" value="10" checked></td>
+               <td><input type="radio" name="sec6question3" value="0"></td>
+            </tr>
+            <tr>
+               <td>Have you or your colleagues undertaken any research on Inclusivizing your service?</td>
+               <td><input type="radio" name="sec6question4" value="10" checked></td>
+               <td><input type="radio" name="sec6question4" value="0"></td>
+            </tr>
+            <tr>
+               <td>Do you encourage your staff to engage in customer satisfaction conversations with 
+                  different user groups?
+               </td>
+               <td><input type="radio" name="sec6question5" value="10" checked></td>
+               <td><input type="radio" name="sec6question5" value="0"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section6');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment6">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section7" tabindex="6">
+            <tr>
+               <th onmouseover="showTooltip(tooltip7)" onmouseout="hideTooltip(tooltip7)">Question**</th>
+               <div class = "tooltip" id="tooltip7">Answer Yes or No to each question</div>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <td>Do you gather information from your users on their beliefs about fitness being a fundamental right for all?</td>
+               <td><input type="radio" name="sec7question1" value="10" checked></td>
+               <td><input type="radio" name="sec7question1" value="0"></td>
+            </tr>
+            <tr>
+               <td>Do you gather information from people who do NOT use your facility on fitness being a fundamental right for all?</td>
+               <td><input type="radio" name="sec7question2" value="10" checked></td>
+               <td><input type="radio" name="sec7question2" value="0"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section7');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment7">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section8" tabindex="7">
+            <tr>
+               <th onmouseover="showTooltip(tooltip8)" onmouseout="hideTooltip(tooltip8)">Question**</th>
+               <div class = "tooltip" id="tooltip8">If yes is selected you can select all or no checkboxes</div>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <td>Do you and your staff provide programmes specifically for people with disabilities</td>
+               <td><input type="radio" name="sec8question1" value="0" onclick="enableCheckbox(81);" checked></td>
+               <td><input type="radio" name="sec8question1" value="0" onclick="disableCheckbox(81);"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center; font-weight:bold; padding:15px;">If yes please complete table below if applicable:</td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th style="text-align:center; padding:15px;">Disability Category</th>
+               <th>Yes</th>
+               <th></th>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Physical disabilities:</td>
+               <td><input type="checkbox" name="sec81" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Intellectual disabilities:</td>
+               <td><input type="checkbox" name="sec81" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Sensory disabilities:</td>
+               <td><input type="checkbox" name="sec81" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Mental health difficulties:</td>
+               <td><input type="checkbox" name="sec81" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th>Question</th>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <td>Do people with disabilities use the gym, pool, or participate in group activities etc. alongside other members?</td>
+               <td><input type="radio" name="sec8question2" value="0" onclick="enableCheckbox(82);" checked></td>
+               <td><input type="radio" name="sec8question2" value="0" onclick="disableCheckbox(82);"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center; font-weight:bold; padding:15px;">If yes please complete table below if applicable:</td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th style="text-align:center; padding:15px;">Disability Category</th>
+               <th>Yes</th>
+               <th></th>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Physical disabilities:</td>
+               <td><input type="checkbox" name="sec82" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Intellectual disabilities:</td>
+               <td><input type="checkbox" name="sec82" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Sensory disabilities:</td>
+               <td><input type="checkbox" name="sec82" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Mental health difficulties:</td>
+               <td><input type="checkbox" name="sec82" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section8');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment8">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section9" tabindex="8">
+            <tr>
+               <th onmouseover="showTooltip(tooltip9)" onmouseout="hideTooltip(tooltip9)">Question**</th>
+               <div class = "tooltip" id="tooltip9">Answer Yes or No to each question</div>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <th>Have you or any of your staff/volunteers had training that facilitates the inclusion of people with disabilities?</th>
+               <th></th>
+               <th></th>
+            </tr>
+            <tr>
+               <td>a. Operational (teaching/instructional staff)</td>
+               <td><input type="radio" name="sec9question1" value="10" checked></td>
+               <td><input type="radio" name="sec9question1" value="0"></td>
+            </tr>
+            <tr>
+               <td>b. Management</td>
+               <td><input type="radio" name="sec9question2" value="10" checked></td>
+               <td><input type="radio" name="sec9question2" value="0"></td>
+            </tr>
+            <tr>
+               <td>c. Front of house</td>
+               <td><input type="radio" name="sec9question3" value="10" checked></td>
+               <td><input type="radio" name="sec9question3" value="0"></td>
+            </tr>
+            <tr>
+               <td>d. Stakeholders/ contracted staff</td>
+               <td><input type="radio" name="sec9question4" value="10" checked></td>
+               <td><input type="radio" name="sec9question4" value="0"></td>
+            </tr>
+            <tr>
+            <tr>
+               <th>Question</th>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <td>Are people with disabilities employed by your organisation and/or 
+               represented on your steering committee/ management committee/ board of management etc.?
+            </td>
+            <td><input type="radio" name="sec9question5" value="10" checked></td>
+            <td><input type="radio" name="sec9question5" value="0"></td>
+            </tr>
+            <tr>
+               <td>Is there a member of staff allocated as a liaison/point person for 
+                  customers with disabilities?
+               </td>
+               <td><input type="radio" name="sec9question6" value="10" checked></td>
+               <td><input type="radio" name="sec9question6" value="0"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section9');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment9">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section10" tabindex="9">
+            <tr>
+               <th onmouseover="showTooltip(tooltip10)" onmouseout="hideTooltip(tooltip10)">Question**</th>
+               <div class = "tooltip" id="tooltip10">Answer Yes or No to question 1 and check all or zero checkboxes</div>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <td>Have you or your colleagues carried out an audit to evaluate the UniversAbility of your facility</td>
+               <td><input type="radio" name="sec10question1" value="10" checked></td>
+               <td><input type="radio" name="sec10question1" value="0"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center; font-weight:bold; padding:15px;">Does your facility(or the facility you use) 
+                  consider the following disabilities when evaluating UniversAbility
+               </td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <th style="text-align:center; padding:15px;">Disability Category</th>
+               <th>Yes</th>
+               <th></th>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Physical disabilities:</td>
+               <td><input type="checkbox" name="sec10" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Intellectual disabilities:</td>
+               <td><input type="checkbox" name="sec10" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Sensory disabilities:</td>
+               <td><input type="checkbox" name="sec10" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center;">Mental health difficulties:</td>
+               <td><input type="checkbox" name="sec10" value="10"></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section10');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment10">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <table class = "center" id = "section11" tabindex="10">
+            <tr>
+               <th onmouseover="showTooltip(tooltip11)" onmouseout="hideTooltip(tooltip11)">Question**</th>
+               <div class = "tooltip" id="tooltip11">Answer Yes or No to each question</div>
+               <th>Yes</th>
+               <th>No</th>
+            </tr>
+            <tr>
+               <td>Is your promotional material inclusive of people with disabilities</td>
+               <td><input type="radio" name="sec11question1" value="10" checked></td>
+               <td><input type="radio" name="sec11question1" value="0"></td>
+            </tr>
+            <tr>
+               <td>Have you or your colleagues/staff developed any promotional materials with 
+                  the aim of attracting people with disabilities?
+               </td>
+               <td><input type="radio" name="sec11question2" value="10" checked></td>
+               <td><input type="radio" name="sec11question2" value="0"></td>
+            </tr>
+            <tr>
+               <td style="text-align:center"><input type="button" value="Progress" onclick="getScore('section11');">&nbsp;&nbsp;**Click to Progress**</td>
+            </tr>
+            <tr>
+               <td>
+                  <p id = "comment11">Section Summary will appear on progression . . . .</p>
+               </td>
+            </tr>
+         </table>
+         <div id="section12" style="text-align:center;" tabindex="11">
+            <input type="button" id="results" onclick="saveComments(); saveScores(); window.location.href='Results.html';" value="Process Results">
+         </div>
+      </form>
+   </body>
+   
+</html>

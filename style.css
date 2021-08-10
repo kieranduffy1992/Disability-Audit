@@ -1,0 +1,146 @@
+/* CSS Document */
+ #Audit{
+     font-family: "Lucida Console", "Courier New", monospace;
+     font-size:11px;
+     background-color:white;
+}
+ .center {
+     margin-left: auto;
+     margin-right: auto;
+}
+ .tooltip{
+     position:absolute;
+     margin-left:65px;
+     width:200px;
+     height:50px;
+     border:1px solid black;
+     visibility:hidden;
+     background-color: #4CAF50;
+     color: #fff;
+     text-align: center;
+     padding: 8px ;
+     border-radius: 10px;
+}
+
+
+ #results{
+    text-align:center;
+     width:30%;
+     margin-left: auto;
+     margin-right: auto;
+     padding:10px;
+     margin-top:10px;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 12px;
+     background-color: #4CAF50;
+     color:white;
+}
+ #section2, #section3, #section4, #section5, #section6, #section7, #section8, #section9, #section10, #section11, #section12 {
+    visibility: hidden;
+}
+ table {
+     width:95%;
+     margin-top:20px;
+     border-collapse: collapse;
+     border: 2px solid rgb(200, 200, 200);
+     letter-spacing: 1px;
+     font-family: sans-serif;
+     font-size: .8rem;
+     color:white;
+}
+ form{
+     background-image: url("images/a.png");
+     background-size: 100% 54%;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 22px;
+}
+ #clock{
+     position: sticky;
+     position: -webkit-sticky;
+     top: 0;
+     width:10%;
+     height:30px;
+     padding-top:12px;
+     text-align:center;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 12px;
+     background-image: url("images/a.png");
+     color:black;
+}
+ td, th {
+     border: 1px solid rgb(190, 190, 190);
+     padding: 5px 10px;
+     font-family: "Lucida Console", "Courier New", monospace;
+     font-size:11px;
+     line-height: 1.4;
+}
+ th{
+    color:black;
+}
+
+ h2{
+    text-align:center;
+}
+  
+ .select{
+    width:120px; padding:2px;
+}
+  
+ #format{
+    width:65%; margin-left: auto;
+    margin-right: auto; 
+}
+  
+ #survey{
+  width:65%; margin-left: auto;
+  margin-right: auto;
+  text-align:center; 
+}
+  
+ p{
+  line-height: 1.4;
+}
+  
+ #resultsForm{
+  border:1px solid; width:65%;margin-left: auto;
+  margin-right: auto; padding: 20px;
+  background-image: url("images/a.png");
+  background-size: 100% 100%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 22px;
+}
+  
+ #resultsBody{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size:11px;
+  line-height: 1.6;
+}
+
+ #resultsButton{
+  margin-top:10px;
+  width:80px;
+  height:30px;  
+}
+ 
+ #timeout{
+  background-image: url("images/a.png");
+  background-size: 100%;
+  text-align:center;
+  width:70%;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size:11px;  
+}
+
+ #timeoutButton {
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: black;
+  border: none;
+  border-radius:14px;
+  color: white;
+  padding: 7px 5px;
+  text-align: center; 
+  font-size: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

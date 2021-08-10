@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src='Results.js'></script>
+
+  </head>
+  <body id="resultsBody">
+  
+  <form id="resultsForm">
+  <h2>Audit Feedback</h2>
+  
+  <div id="format">
+  <h4>Section 1</h4>
+  <p id="section1">Section Score(out of 20): </p>
+  <h4>Section 2</h4>
+  <p id="section2">Section Score(out of 25): </p>
+  <h4>Section 3</h4>
+  <p id="section3">Section Score(out of 10): </p>
+  <h4>Section 4</h4>
+  <p id="section4">Section Score(out of 40): </p>
+  <h4>Section 5</h4>
+  <p id="section5">Section Score(out of 50): </p>
+  <h4>Section 6</h4>
+  <p id="section6">Section Score(out of 50): </p>
+  <h4>Section 7</h4>
+  <p id="section7">Section Score(out of 20): </p>
+  <h4>Section 8</h4>
+  <p id="section8">Section Score(out of 80): </p>
+  <h4>Section 9</h4>
+  <p id="section9">Section Score(out of 60): </p>
+  <h4>Section 10</h4>
+  <p id="section10">Section Score(out of 50): </p>
+  <h4>Section 11</h4>
+  <p id="section11">Section Score(out of 20): </p>
+  <h4>Final Comment</h4>
+  <p id="section12" style="font-weight:bold;">Final Score(out of 425): </p>
+  </div>
+  <h2>Survey</h2>
+  <div id="survey">
+  Did you feel the Audit questions were appropiate:
+  <select class="select" name="question" id="question" onchange="populateListbox();">
+  <option value="default"></option>
+  <option value="yes">Yes</option>
+  <option value="no">No</option>  
+  </select><br><br>
+  
+  What is the reason for the answer provided above:
+  <select class="select" name="answer" id="answer">  
+  </select>
+  <button id="resultsButton"onclick="window.alert('Thank you for your feedback');">Submit</button>
+  </div>
+  
+  </form>
+
+
+  </body>
+</html>
